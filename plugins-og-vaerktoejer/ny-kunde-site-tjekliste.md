@@ -65,17 +65,17 @@ Udfyld FØRST — det styrer resten af tjeklisten:
 
 ## Fase 3: Performance
 
-- [ ] **WP Rocket** → Installér og aktivér
-  - [ ] Cache → Aktivér caching
-  - [ ] File Optimization → Minify CSS og JS
+- [ ] **LiteSpeed Cache** → Installér og aktivér (gratis fra wordpress.org)
+  - [ ] Page Cache → Aktivér caching
+  - [ ] CSS/JS Optimization → Minify og Combine
   - [ ] LazyLoad → Aktivér for billeder og iframes
-  - [ ] Preloading → Aktivér sitemap-baseret preload
+  - [ ] Crawler → Aktivér for proaktiv cache-opbygning
   - [ ] Database → Ryd transients og revisioner
-  - [ ] CDN → Opsæt hvis kunden bruger CDN
-- [ ] **Billeder** → Konverter til WebP (ShortPixel, Imagify eller Smush)
+  - [ ] CDN → Opsæt QUIC.cloud eller andet CDN
+  - [ ] Billedoptimering → Aktivér WebP-konvertering via QUIC.cloud
 - [ ] **Test hastighed** → GTmetrix + PageSpeed Insights
 
-> Se: `plugins-og-vaerktoejer/wordpress-plugins/wp-rocket-opsaetning.md`
+> Se: `plugins-og-vaerktoejer/wordpress-plugins/litespeed-cache-opsaetning.md`
 
 ---
 
