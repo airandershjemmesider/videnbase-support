@@ -6,6 +6,32 @@ Denne tjekliste dækker ALT der skal opsættes når en ny kundes hjemmeside går
 
 ---
 
+## Fase 0: Kundeinfo og server
+
+Udfyld FØRST — det styrer resten af tjeklisten:
+
+- [ ] **Domæne:** ____________________
+- [ ] **Hosting:** WHM/cPanel server / Managed WP / Andet: ________
+- [ ] **SEO-pakke:** ☐ Ja → udfør Fase 4 komplet ☐ Nej → spring Fase 4 over (undtagen sitemap)
+- [ ] **Email-løsning:** ☐ M365 ☐ Google Workspace ☐ cPanel email ☐ Andet
+- [ ] **Sociale medier:** ☐ Instagram ☐ Facebook ☐ YouTube ☐ Ingen feeds
+
+### Hvis WHM/cPanel server:
+- [ ] **Opret cPanel-konto** i WHM (Account Functions → Create New Account)
+- [ ] **DNS zone** → Oprettet automatisk ved kontoen, men tjek A-record peger korrekt
+- [ ] **PHP version** → MultiPHP Manager → Vælg 8.2+ for domænet
+- [ ] **PHP indstillinger** → MultiPHP INI Editor:
+  - `memory_limit` = 256M
+  - `upload_max_filesize` = 64M
+  - `max_execution_time` = 300
+  - `post_max_size` = 64M
+- [ ] **AutoSSL** → Tjek at SSL er aktivt (SSL/TLS Status)
+- [ ] **Installér WordPress** → Softaculous eller manuelt
+
+> Se: `dns-og-hosting/whm-cpanel/` mappen
+
+---
+
 ## Fase 1: WordPress grundopsætning
 
 - [ ] **WordPress sprog** → Indstillinger → Generelt → Dansk
@@ -53,7 +79,9 @@ Denne tjekliste dækker ALT der skal opsættes når en ny kundes hjemmeside går
 
 ---
 
-## Fase 4: SEO
+## Fase 4: SEO ⚠️ Kun hvis kunden har SEO-pakke (se Fase 0)
+
+> **Uden SEO-pakke:** Installér stadig RankMath (grundopsætning + sitemap), men spring Search Console, Analytics og Tag Manager over.
 
 - [ ] **RankMath** → Installér og kør setup wizard
   - [ ] Site type og business info
