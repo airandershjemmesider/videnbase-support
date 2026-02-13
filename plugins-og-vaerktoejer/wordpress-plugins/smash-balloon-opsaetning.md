@@ -1,126 +1,206 @@
-# Smash Balloon Social Feeds — Opsætning
+# Smash Balloon — Opsætning af Social Media Feeds
 
-## Hvad er det
+## Hvad er Smash Balloon
 
-Smash Balloon er en samling plugins der viser social media feeds direkte på hjemmesiden. Du kan vise Instagram-billeder, Facebook-opslag, YouTube-videoer og tweets i et pænt layout der matcher hjemmesidens design.
+Smash Balloon er en suite af WordPress-plugins der viser sociale medier som feeds direkte på hjemmesiden. Feeds opdateres automatisk når der postes nyt indhold på de tilknyttede konti. Det er den mest udbredte løsning til social media feeds i WordPress.
 
-Smash Balloon fås som separate plugins:
-- **Instagram Feed** (gratis + Pro)
-- **Custom Facebook Feed** (gratis + Pro)
-- **Feeds for YouTube** (gratis + Pro)
-- **Custom Twitter Feeds** (Pro)
-- **Social Wall** (Pro — kombinerer flere feeds)
+## De 4 plugins
 
-## Opsætning: Instagram Feed
+| Plugin | Formål | Slug |
+|--------|--------|------|
+| Instagram Feed | Vis Instagram-opslag i grid/carousel | `instagram-feed` |
+| Custom Facebook Feed | Vis Facebook Page opslag, events, albums | `custom-facebook-feed` |
+| Feeds for YouTube | Vis YouTube-videoer fra kanal eller playliste | `feeds-for-youtube` |
+| Custom Twitter Feeds | Vis tweets/X-opslag | `custom-twitter-feeds` |
 
-### Trin 1: Installation
-1. Gå til **Plugins → Tilføj nyt**
-2. Søg efter "Smash Balloon Instagram"
-3. Installér og aktivér **Smash Balloon Social Photo Feed**
+Der findes også **Social Wall** som kombinerer flere feeds i ét samlet view.
 
-### Trin 2: Forbind Instagram-konto
-1. Gå til **Instagram Feed → Settings**
-2. Klik **Add Source**
-3. Vælg kontotype:
-   - **Personal** — viser kun egne billeder (enklere opsætning)
-   - **Business** — kræver Facebook Business-side, giver flere muligheder
-4. Følg autorisationsflowet og godkend forbindelsen
-5. Kontoen vises nu under "Sources"
+## Gratis vs Pro
 
-### Trin 3: Opret feed
-1. Gå til **Instagram Feed → All Feeds**
-2. Klik **Add New**
-3. Vælg feedtype:
-   - **User Timeline** — billeder fra en specifik konto
-   - **Hashtag** (Pro) — billeder med et bestemt hashtag
-   - **Tagged** (Pro) — billeder hvor kontoen er tagget
-4. Vælg den forbundne konto som kilde
-5. Vælg layout og antal billeder
+| Funktion | Gratis | Pro |
+|----------|--------|-----|
+| Grundlæggende feed | Ja | Ja |
+| Antal feeds | 1 | Ubegrænset |
+| Layout-typer | Grid | Grid, Carousel, Masonry, Highlight |
+| Hashtag-feeds (Instagram) | Nej | Ja |
+| Shoppable feeds | Nej | Ja |
+| Album/event feeds (Facebook) | Nej | Ja |
+| Lightbox popup | Nej | Ja |
+| Filtrering og moderering | Begrænset | Fuld kontrol |
+| Prioriteret support | Nej | Ja |
 
-### Trin 4: Tilpas design
-- **Layout:** Grid, Carousel, Masonry, Highlight
-- **Antal kolonner:** Tilpas til desktop, tablet og mobil
-- **Antal billeder:** Typisk 6-12 for en fin visning
-- **Header:** Vis/skjul profilbillede og bio
-- **Farver:** Arv fra tema eller sæt manuelt
-- **Hover-effekt:** Vis likes/kommentarer ved hover
+**Anbefaling:** Pro er nødvendig for de fleste kundesites — carousel-layout og lightbox er næsten altid ønsket.
 
-## Opsætning: Facebook Feed
+---
 
-### Trin 1: Installation
-1. Søg efter "Smash Balloon Custom Facebook Feed"
-2. Installér og aktivér
+## Instagram Feed — Opsætning
 
-### Trin 2: Forbind Facebook-side
-1. Gå til **Facebook Feed → Settings**
-2. Klik **Add Source**
-3. Log ind med Facebook og vælg den side du vil forbinde
+### 1. Forbind Instagram-konto
+
+1. Gå til **Instagram Feed → Settings → Sources**
+2. Klik **Add New** og vælg **Business** eller **Personal**
+3. Log ind med Facebook (Business/Creator) eller direkte Instagram (Personal)
+4. Godkend adgang — Smash Balloon gemmer et access token
+
+**Vigtig:** Business/Creator-konto kræves for hashtag-feeds og avanceret data. Personal giver kun egne opslag.
+
+### 2. Opret feed
+
+1. Gå til **Instagram Feed → All Feeds → Add New**
+2. Vælg feed-type:
+   - **User Timeline** — opslag fra den tilknyttede konto
+   - **Public Hashtag** (Pro) — opslag med specifik hashtag
+   - **Tagged Posts** (Pro) — opslag hvor kontoen er tagget
+3. Vælg kilde (den forbundne konto)
+
+### 3. Layout
+
+| Layout | Beskrivelse | Bedst til |
+|--------|-------------|-----------|
+| Grid | Ensartet gitter med faste kolonner | Porteføljer, butikker |
+| Carousel | Vandret slider med pile | Hero-sektioner, footers |
+| Masonry | Pinterest-stil med varierende højder | Blogs, kreative sites |
+| Highlight | Fremhæver hvert 3. eller 4. billede | Gallerier med variation |
+
+### 4. Styling
+
+- **Farver:** Arv fra tema eller sæt custom farver (baggrund, tekst, links)
+- **Header:** Vis/skjul profil-header med avatar og bio
+- **Hover-effekt:** Vis likes/kommentarer eller caption ved hover
+- **Load More knap:** Tekst, farve og synlighed kan tilpasses
+- **Antal opslag:** Sæt antal synlige opslag (typisk 6-12)
+- **Kolonner:** Desktop, tablet og mobil kan sættes separat
+
+### 5. Indsæt på side
+
+- **Shortcode:** Kopiér shortcoden fra feed-oversigten, f.eks. `[instagram-feed feed=1]`
+- **Elementor widget:** Smash Balloon har dedikerede widgets — søg "Instagram Feed" i widget-panelet
+- **Alternativ i Elementor:** Brug HTML-widget og indsæt shortcoden
+
+---
+
+## Facebook Feed — Opsætning
+
+### 1. Forbind Facebook Page
+
+1. Gå til **Facebook Feed → Settings → Sources**
+2. Klik **Add New** og log ind med Facebook
+3. Vælg den Page du vil vise feed fra
 4. Godkend de nødvendige tilladelser
 
-### Trin 3: Opret og tilpas feed
-1. Vælg indholdstype: Timeline, Photos, Events, Albums
-2. Tilpas layout, farver og antal opslag
-3. Vælg om likes/kommentarer/delinger skal vises
+**Bemærk:** Personlige profiler understøttes ikke — kun Pages.
 
-## Indsæt feed på hjemmesiden
+### 2. Feed-typer
 
-### Metode 1: Shortcode
-- Kopiér shortcoden fra feed-indstillingerne (f.eks. `[instagram-feed feed=1]`)
-- Indsæt i en tekst-widget, side eller indlæg
+| Type | Beskrivelse | Pro krævet |
+|------|-------------|------------|
+| Timeline | Sidens opslag i kronologisk rækkefølge | Nej |
+| Events | Kommende og tidligere events | Ja |
+| Photos | Alle billeder fra siden | Ja |
+| Albums | Vis specifikke fotoalbums | Ja |
 
-### Metode 2: WordPress Block
-- I block-editoren: Tilføj blok → søg "Instagram Feed" eller "Facebook Feed"
-- Vælg det ønskede feed
+### 3. Indstillinger
 
-### Metode 3: Elementor Widget
-- Smash Balloon tilføjer automatisk widgets til Elementor
-- Træk widgeten ind på siden og vælg feedet
+- **Post-typer:** Filtrér på tekst, billeder, video, links eller events
+- **Antal opslag:** Typisk 5-10 for timeline
+- **Dato-format:** Kan tilpasses til dansk format
+- **Tekst-længde:** Sæt maks antal tegn før "læs mere"
 
-## GDPR og cookie compliance
+---
 
-**Vigtigt:** Smash Balloon loader indhold fra Instagram/Facebook-servere. Dette sætter 3. parts cookies og deler brugerdata med Meta.
+## Smash Balloon i Elementor
 
-### Opsætning med Complianz
-1. Kør en cookie-scan i Complianz efter installation af Smash Balloon
-2. Complianz detekterer automatisk social media cookies
-3. Kategorisér cookies som **Marketing** eller **3. part**
-4. Feedet blokeres indtil brugeren accepterer cookies
+### Placeringsmetoder
+
+1. **Dedikeret widget:** Træk Smash Balloon-widgeten ind — bedste metode
+2. **Shortcode-widget:** Brug Elementors Shortcode-widget med feed-koden
+3. **HTML-widget:** Alternativ hvis shortcode-widget ikke renderer korrekt
+
+### Responsive indstillinger
+
+- Sæt kolonner separat for desktop/tablet/mobil i Smash Balloon-indstillingerne
+- I Elementor: Brug sektionens responsive visibility hvis feedet skal skjules på mobil
+- Carousel-layout tilpasser sig automatisk til skærmbredde
+
+### Typiske placeringer
+
+- **Footer:** Social proof — vis seneste opslag i en smal sektion
+- **Sidebar:** Kompakt feed med 4-6 billeder i grid
+- **Dedikeret sektion:** Fuld bredde med carousel eller masonry
+- **Portfolio-side:** Grid med Instagram-billeder som galleri
+
+---
+
+## Performance og GDPR
+
+### Caching
+
+Smash Balloon cacher feeds lokalt i WordPress-databasen. Standard cache-tid er typisk 1-12 timer:
+- Ingen API-kald ved hvert sidebesøg
+- Hurtigere loadtid efter første indlæsning
+- Cache kan tømmes manuelt under plugin-indstillingerne
+
+### GDPR-overvejelser
+
+Feeds indlæser billeder og data fra Facebooks/Instagrams servere:
+- Besøgendes IP-adresse sendes til Meta/X
+- Tracking-cookies kan sættes af de sociale platforme
+- **Kræver cookie-consent** i EU
+
+### Complianz-integration
+
+1. Installer Complianz (eller anden consent-løsning)
+2. Kør en cookie-scan efter installation af Smash Balloon
+3. Complianz detekterer automatisk social media cookies
+4. Feeds blokeres indtil besøgende accepterer marketing/statistik-cookies
 5. Complianz viser en placeholder med besked om at acceptere cookies
 
-### Alternativ: GDPR-venlig løsning
-- Brug Smash Balloons **GDPR compliance** indstilling
-- **Instagram Feed → Settings → Advanced → GDPR**
-- Aktivér "Enable GDPR Setting" — loader kun lokalt cachede billeder
-- Reducerer 3. parts datadeling men begrænser funktionaliteten
+**Alternativ:** Aktivér Smash Balloons egen GDPR-indstilling under **Advanced → GDPR** — loader kun lokalt cachede billeder, men begrænser funktionaliteten.
 
-## Fejlsøgning
+---
 
-### "Unable to retrieve" eller tomt feed
-1. **Token udløbet** — gå til plugin settings og forny forbindelsen
-2. Klik **Reconnect** eller **Add Source** igen
-3. Instagram tokens udløber efter ~60 dage (Personal accounts)
-4. Business accounts har længere tokenlevetid
+## Typiske problemer
 
-### Billeder loader langsomt
-- Aktivér **Image Resizing** under Advanced settings
-- Smash Balloon cacher billeder lokalt — første load kan være langsom
-- Tjek at cron-jobs kører korrekt (WP-Cron)
+### "Instagram token expired"
 
-### Feed viser gamle billeder
-- Klik **Clear Cache** i feed-indstillingerne
-- Tjek cache-intervallet (standard: 12 timer)
-- Forkortes kan sættes ned til 30 minutter (men belaster API'en mere)
+- Tokens udløber efter ca. 60 dage (Personal accounts)
+- Business accounts har længere tokenlevetid
+- Smash Balloon forsøger automatisk fornyelse, men det fejler nogle gange
+- **Løsning:** Gå til Sources → Reconnect den pågældende konto
+- **Forebyg:** Sørg for at WP-Cron kører korrekt (token-fornyelse kører via cron)
 
-### Feed vises ikke i Elementor
+### Feed viser ikke nye opslag
+
+- Smash Balloon cacher lokalt — nye opslag vises først når cachen udløber
+- **Løsning:** Gå til plugin-indstillingerne og klik "Clear Cache"
+- Tjek også at kontoen stadig er forbundet under Sources
+
+### API rate limits
+
+- Instagram/Facebook API har grænser for antal kald per time
+- Normalt ikke et problem med caching aktiveret
+- Hvis feedet viser fejl: Øg cache-tiden til 12-24 timer
+- Sites med meget høj trafik: Overvej længere cache-intervaller
+
+### Feed loader ikke (tomt)
+
+- Tjek at JavaScript-konsollen ikke viser fejl
+- Sikkerhedsplugins (Wordfence, Sucuri) kan blokere API-kald
+- Tjek at PHP-versionen er kompatibel (kræver min. PHP 7.4)
 - Ryd Elementor-cache under **Elementor → Tools → Regenerate CSS**
-- Tjek at shortcoden er korrekt indsat
-- Prøv med en simpel shortcode i en HTML-widget som alternativ
 
-## Bemærkninger
+---
 
-- Smash Balloon Free viser kun basale feeds med begrænset styling
-- Pro-versionerne giver: Carousel, lightbox, filtrering, flere layouts
-- Instagram API har rate limits — undgå for mange feeds på samme side
-- Brug altid caching for at undgå langsom sideload
-- Husk GDPR-compliance — social feeds kræver samtykke i EU
-- Test at tokens ikke er udløbet efter plugin-opdateringer
+## Hurtig tjekliste for opsætning
+
+- [ ] Installér det relevante Smash Balloon plugin
+- [ ] Aktivér licens (Pro) under Settings → License
+- [ ] Forbind social medie-konto under Sources
+- [ ] Opret feed og vælg layout
+- [ ] Tilpas styling til kundens brand (farver, kolonner, hover)
+- [ ] Sæt responsive kolonner (desktop/tablet/mobil)
+- [ ] Indsæt feed på side via widget eller shortcode
+- [ ] Test at feedet loader korrekt på frontend
+- [ ] Tjek GDPR-compliance med Complianz eller lignende
+- [ ] Informér kunden om at token evt. skal fornyes (60 dage)
+- [ ] Sæt passende cache-tid (anbefalet: 6-12 timer)
